@@ -1,0 +1,1 @@
+- [ ] create very basic npm package initially with minimum setup
