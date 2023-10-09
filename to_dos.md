@@ -6,5 +6,5 @@
 - [x] add shadcn components as part of this library
 - [x] add ag-grid component as part of this lib
 
-- [ ] try experimenting with removing @import "tailwindcss/base"; from tailwind.css, this might be useful for consuming applications
+- [x] disabled preflight css, as css vars survive this change, which are needed for shadcn lib
 - [ ] try experimenting with "tw-" prefix for more safe styles in tailwindcss
