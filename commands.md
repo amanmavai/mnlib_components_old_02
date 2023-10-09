@@ -43,4 +43,6 @@ $ npx shadcn-ui@latest init
 $ npm i @radix-ui/react-slot
 # copy paste the button component code from https://ui.shadcn.com/docs/components/button
 
+# add ag-grid component
+$ npm i ag-grid-community ag-grid-react ag-grid-enterprise
 ```
