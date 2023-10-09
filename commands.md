@@ -23,4 +23,8 @@ $ npm i -D tailwindcss
 $ npx tailwindcss init
 $ npm i -D prettier-plugin-tailwindcss
 
+# eslint
+$ npm init @eslint/config
+$ npm i -D eslint-config-prettier
+
 ```
