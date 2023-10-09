@@ -45,4 +45,11 @@ $ npm i @radix-ui/react-slot
 
 # add ag-grid component
 $ npm i ag-grid-community ag-grid-react ag-grid-enterprise
+
+# add Combobox component
+$ npm install @radix-ui/react-popover
+$ npm install cmdk
+$ npm install @radix-ui/react-dialog
+
+
 ```
