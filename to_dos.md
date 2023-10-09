@@ -3,7 +3,7 @@
 
 - [x] add minimum linting
 
-- [ ] add shadcn components as part of this library
+- [x] add shadcn components as part of this library
 - [ ] add ag-grid component as part of this lib
 
 - [ ] try experimenting with removing @import "tailwindcss/base"; from tailwind.css, this might be useful for consuming applications
