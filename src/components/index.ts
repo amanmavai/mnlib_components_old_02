@@ -3,3 +3,4 @@ export * from "./hello-universe";
 export * from "./button";
 export * from "./ag_grid/table";
 export * from "./ag_grid/utils";
+export * from "./debug";
