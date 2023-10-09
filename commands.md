@@ -18,4 +18,9 @@ $ touch tsconfig.json tsconfig-cjs.json tsconfig-esm.json
 $ npm i -D react react-dom @types/react @types/react-dom
 
 
+# add styling using tailwindcss cli
+$ npm i -D tailwindcss
+$ npx tailwindcss init
+$ npm i -D prettier-plugin-tailwindcss
+
 ```

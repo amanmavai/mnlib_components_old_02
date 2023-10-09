@@ -5,5 +5,5 @@ interface UniverseProps {
   expansion: number;
 }
 export function HelloUniverse(props: UniverseProps) {
-  return <div>Hello Universe</div>;
+  return <div className="text-9xl text-red-400">Hello Universe</div>;
 }

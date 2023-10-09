@@ -6,5 +6,5 @@ export interface AtomProps {
 }
 
 export function HelloAtom(props: AtomProps) {
-  return <div>Hello Atom</div>;
+  return <div className="text-5xl text-green-500">Hello Atom</div>;
 }
