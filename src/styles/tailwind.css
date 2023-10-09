@@ -1,5 +1,6 @@
 /* START__BASE */
 @import "tailwindcss/base";
+@import "./shadcn.css";
 /* END__BASE */
 
 /* START__COMPONENTS */

@@ -27,4 +27,20 @@ $ npm i -D prettier-plugin-tailwindcss
 $ npm init @eslint/config
 $ npm i -D eslint-config-prettier
 
+
+# shadcn library
+$ npm i -D tailwindcss-animate
+$ npm i class-variance-authority clsx tailwind-merge
+# icon lib
+$ npm install lucide-react
+
+# use cli to add shadcn components
+$ npx shadcn-ui@latest init
+# remove path aliases, as this another hurdle for making build setup complex
+# also removed components.json file
+
+# add button component from shadcn manually
+$ npm i @radix-ui/react-slot
+# copy paste the button component code from https://ui.shadcn.com/docs/components/button
+
 ```
