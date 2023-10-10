@@ -28,7 +28,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "npm run clean && npm run build:js && npm run build:css",
+    "build": "npm run build:js && npm run build:css",
     "build:js": "npm run build:js:cjs && npm run build:js:esm",
     "build:js:cjs": "tsc --project tsconfig-cjs.json",
     "build:js:esm": "tsc --project tsconfig-esm.json",
