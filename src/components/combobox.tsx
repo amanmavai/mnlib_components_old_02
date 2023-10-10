@@ -17,11 +17,17 @@ type OptionType = {
 
 type ComboboxProps = {
   options: OptionType[];
+  // Called when an option is selected, the params are option's value and option instance
+  onSelect?: (currentValue: RawValue, option: OptionType) => void;
+  value?: RawValue;
 };
 
-export function Combobox({options}: ComboboxProps) {
+export function Combobox({options, onSelect, value: controlledValue}: ComboboxProps) {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+  const [internalValue, setValue] = React.useState("");
+
+  const isControlled = typeof controlledValue != "undefined";
+  const value = isControlled ? controlledValue : internalValue;
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -40,7 +46,10 @@ export function Combobox({options}: ComboboxProps) {
               <CommandItem
                 key={option.id}
                 onSelect={(currentValue) => {
-                  setValue(currentValue === value ? "" : currentValue);
+                  onSelect?.(currentValue, option);
+                  if (!isControlled) {
+                    setValue(currentValue === value ? "" : currentValue);
+                  }
                   setOpen(false);
                 }}
               >
