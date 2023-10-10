@@ -10,3 +10,4 @@
 - [ ] try experimenting with "tw-" prefix for more safe styles in tailwindcss
 
 - [x] add Combobox component (built using a composition of the <Popover /> and the <Command /> components.)
+- [ ] add layout component
