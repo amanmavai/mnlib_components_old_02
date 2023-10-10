@@ -46,7 +46,7 @@ export function Combobox({options, onSelect, value: controlledValue}: ComboboxPr
               <CommandItem
                 key={option.id}
                 onSelect={(currentValue) => {
-                  onSelect?.(currentValue, option);
+                  onSelect?.(option.value, option);
                   if (!isControlled) {
                     setValue(currentValue === value ? "" : currentValue);
                   }
