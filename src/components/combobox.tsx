@@ -7,6 +7,7 @@ import {cn} from "../lib/utils";
 import {Button} from "./ui/button";
 import {Command, CommandEmpty, CommandGroup, CommandInput, CommandItem} from "./ui/command";
 import {Popover, PopoverContent, PopoverTrigger} from "./ui/popover";
+export const DEFAULT_OPTION: OptionType = {id: "default_option_id", value: "", label: "Select..."};
 
 type RawValue = string | number;
 type OptionType = {
@@ -17,8 +18,8 @@ type OptionType = {
 
 type ComboboxProps = {
   options: OptionType[];
-  // Called when an option is selected, the params are option's value and option instance
-  onSelect?: (currentValue: RawValue, option: OptionType) => void;
+  // called when an option is selected
+  onSelect?: (option: OptionType) => void;
   value?: RawValue;
 };
 
@@ -33,7 +34,7 @@ export function Combobox({options, onSelect, value: controlledValue}: ComboboxPr
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="outline" role="combobox" aria-expanded={open} className="w-[200px] justify-between">
-          {value ? options.find((option) => option.value === value)?.label : "Select..."}
+          {value ? options.find((option) => option.value === value)?.label : DEFAULT_OPTION.label}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -46,7 +47,7 @@ export function Combobox({options, onSelect, value: controlledValue}: ComboboxPr
               <CommandItem
                 key={option.id}
                 onSelect={(currentValue) => {
-                  onSelect?.(option.value, option);
+                  onSelect?.(option);
                   if (!isControlled) {
                     setValue(currentValue === value ? "" : currentValue);
                   }
@@ -62,4 +63,14 @@ export function Combobox({options, onSelect, value: controlledValue}: ComboboxPr
       </PopoverContent>
     </Popover>
   );
+}
+
+export function useCombobox(initialOption: OptionType = DEFAULT_OPTION) {
+  const [selectedOption, setSelectedOption] = React.useState(initialOption);
+
+  function handleSelect(option: OptionType) {
+    setSelectedOption(option);
+  }
+
+  return {selectedValue: selectedOption.value, selectedOption, handleSelect};
 }
