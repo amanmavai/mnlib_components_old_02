@@ -65,12 +65,14 @@ export function Combobox({options, onSelect, value: controlledValue}: ComboboxPr
   );
 }
 
-export function useCombobox(initialOption: OptionType = DEFAULT_OPTION) {
-  const [selectedOption, setSelectedOption] = React.useState(initialOption);
+export function useCombobox(initialValue: RawValue = DEFAULT_OPTION.value, options: OptionType[]) {
+  const initialSelectedOption = options.find((option) => option.value === initialValue);
+
+  const [selectedOption, setSelectedOption] = React.useState(initialSelectedOption);
 
   function handleSelect(option: OptionType) {
     setSelectedOption(option);
   }
 
-  return {selectedValue: selectedOption.value, selectedOption, handleSelect};
+  return {selectedValue: selectedOption?.value, selectedOption, handleSelect};
 }
