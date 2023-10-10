@@ -22,12 +22,12 @@ export function Layout({children, header, footer}: LayoutProps) {
 }
 
 export function Header() {
-  return <header className="h-20">{/* <!-- Header content --> */}</header>;
+  return <header className="h-20 bg-cyan-400">{/* <!-- Header content --> */}</header>;
 }
 
 export function Footer() {
   return (
-    <footer className="h-20">
+    <footer className="h-20 bg-gray-400">
       {/* <!-- Footer content --> */}
       <p className="flex items-center justify-center text-sm font-light tracking-widest">
         Copyright &copy; {new Date().getFullYear()} All Rights Reserved by Aman
