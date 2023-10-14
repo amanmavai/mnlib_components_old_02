@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "jsx": "react",
-    "module": "ES2020",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
+    "module": "ES2022",
     "sourceMap": true,
     "declaration": true,
     "outDir": "./dist",
@@ -14,5 +14,6 @@
     "noUncheckedIndexedAccess": true,
     "alwaysStrict": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src"]
 }

@@ -10,4 +10,7 @@
 - [ ] try experimenting with "tw-" prefix for more safe styles in tailwindcss
 
 - [x] add Combobox component (built using a composition of the <Popover /> and the <Command /> components.)
-- [ ] add layout component
+- [ ] add layout component (in-progress)
+
+- [ ] create beautiful card/statistics components
+- [ ] add highchart-utils component over here
