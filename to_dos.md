@@ -14,3 +14,5 @@
 
 - [ ] create beautiful card/statistics components
 - [ ] add highchart-utils component over here
+
+- [ ] add daisyui

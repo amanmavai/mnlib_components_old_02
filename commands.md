@@ -51,5 +51,7 @@ $ npm install @radix-ui/react-popover
 $ npm install cmdk
 $ npm install @radix-ui/react-dialog
 
+# add daisyui
+$ npm i -D daisyui@latest
 
 ```
