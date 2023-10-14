@@ -23,7 +23,7 @@ export function Layout({children, header, footer}: LayoutProps) {
 
 export function Header() {
   return (
-    <header className="bg-gray-800 p-4 h-20 flex justify-between">
+    <header className="bg-gray-800 p-4 h-20 flex justify-between items-center text-white">
       {/* <!-- Header content --> */}
       <div>Logo</div>
       <div className="flex items-center gap-2">
