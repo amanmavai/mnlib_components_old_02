@@ -1,4 +1,12 @@
 import * as React from "react";
 export function Toggle() {
-  return <input type="checkbox" className="tw-toggle" checked />;
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <input
+      type="checkbox"
+      className="tw-toggle tw-toggle-accent"
+      checked={checked}
+      onChange={(e) => setChecked(e.target.checked)}
+    />
+  );
 }
