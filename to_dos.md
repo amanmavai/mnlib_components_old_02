@@ -12,7 +12,7 @@
 - [x] add Combobox component (built using a composition of the <Popover /> and the <Command /> components.)
 - [ ] add layout component (in-progress)
 
+- [x] add daisyui
+
 - [ ] create beautiful card/statistics components
 - [ ] add highchart-utils component over here
-
-- [ ] add daisyui
