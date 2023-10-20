@@ -48,9 +48,7 @@ export function Header({title, links}: HeaderProps) {
           >
             {links.map((link, index) => (
               <li key={index}>
-                <a href={link.href} className="text-white hover:text-gray-400 transition duration-300">
-                  {link.text}
-                </a>
+                <a href={link.href}>{link.text}</a>
               </li>
             ))}
           </ul>
