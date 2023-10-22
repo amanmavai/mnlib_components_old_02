@@ -22,9 +22,14 @@ export function Layout({children, header, footer}: LayoutProps) {
   );
 }
 
+type LinkItem = {
+  id: string;
+  linkElement: React.ReactNode;
+};
+
 type HeaderProps = {
   title: string;
-  links: Array<{href: string; text: string}>;
+  links: Array<LinkItem>;
   actionIcons?: React.JSX.Element[];
 };
 
@@ -48,8 +53,8 @@ export function Header({title, links, actionIcons}: HeaderProps) {
           }
           items={links.map((link) => {
             return {
-              id: link.href,
-              element: <a href={link.href}>{link.text}</a>,
+              id: link.id,
+              element: link.linkElement,
             };
           })}
         />
