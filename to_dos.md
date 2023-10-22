@@ -16,3 +16,5 @@
 
 - [ ] create beautiful card/statistics components
 - [ ] add highchart-utils component over here
+
+- [ ] create a SheetMenu component similar to github which gets opened when clicking on hamburger menu this is great as it works on all screens
