@@ -7,3 +7,5 @@ export * from "./debug";
 export * from "./combobox";
 export * from "./layout";
 export * from "./toggle";
+export * from "./menu-list";
+export * from "./ui/avatar";

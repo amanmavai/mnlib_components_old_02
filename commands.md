@@ -54,4 +54,10 @@ $ npm install @radix-ui/react-dialog
 # add daisyui
 $ npm i -D daisyui@latest
 
+# add dropdown menu
+$ npm install @radix-ui/react-dropdown-menu
+$ npm install @radix-ui/react-avatar
+
+
+
 ```
