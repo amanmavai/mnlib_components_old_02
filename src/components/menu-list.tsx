@@ -16,7 +16,7 @@ type DropdownItem = {
 };
 type MenuListProps = {
   trigger: React.ReactNode;
-  label: React.ReactNode;
+  label?: React.ReactNode;
   items: DropdownItem[];
 };
 

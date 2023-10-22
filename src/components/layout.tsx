@@ -1,4 +1,5 @@
 import * as React from "react";
+import {MenuList} from "./menu-list";
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -31,29 +32,27 @@ export function Header({title, links, actionIcons}: HeaderProps) {
   return (
     <header className="tw-navbar bg-base-100 border-b border-b-gray-200">
       <div className="tw-navbar-start">
-        <div className="tw-dropdown">
-          <label tabIndex={0} className="tw-btn tw-btn-ghost tw-btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="tw-menu tw-menu-sm tw-dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            {links.map((link, index) => (
-              <li key={index}>
-                <a href={link.href}>{link.text}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <MenuList
+          trigger={
+            <label tabIndex={0} className="tw-btn tw-btn-ghost tw-btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </label>
+          }
+          items={links.map((link) => {
+            return {
+              id: link.href,
+              element: <a href={link.href}>{link.text}</a>,
+            };
+          })}
+        />
       </div>
       <div className="tw-navbar-center">
         <a className="tw-btn tw-btn-ghost normal-case text-xl">{title}</a>
