@@ -33,7 +33,11 @@ export function MenuList({trigger, label, items}: MenuListProps) {
         )}
         <DropdownMenuGroup>
           {items.map((item) => {
-            return <DropdownMenuItem key={item.id}>{item.element}</DropdownMenuItem>;
+            return (
+              <DropdownMenuItem key={item.id} asChild>
+                {item.element}
+              </DropdownMenuItem>
+            );
           })}
         </DropdownMenuGroup>
       </DropdownMenuContent>

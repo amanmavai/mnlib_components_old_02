@@ -9,3 +9,4 @@ export * from "./layout";
 export * from "./toggle";
 export * from "./menu-list";
 export * from "./ui/avatar";
+export {cn} from "../lib/utils";
