@@ -1,6 +1,6 @@
-- [ ] add component to the src/components folder
-- [ ] add an export entry to src/components/index.ts file
-- [ ] update version number in package.json file
-- [ ] execute npm run publish:pkg command to publish the package.
-- [ ] test the published changes from consuming applications
-- [ ] commit the change with tag and push the same
+- 1. add component to the src/components folder
+- 2. add an export entry to src/components/index.ts file
+- 3. update version number in package.json file
+- 4. execute npm run publish:pkg command to publish the package.
+- 5. test the published changes from consuming applications
+- 6. commit the change with tag and push the same
