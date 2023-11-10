@@ -10,3 +10,7 @@
 /* START__UTILITIES */
 @import "tailwindcss/utilities";
 /* END__UTILITIES */
+
+/* START__VARIANTS */
+@import "tailwindcss/variants";
+/* END__VARIANTS */
