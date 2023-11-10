@@ -28,13 +28,11 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
+    "build": "npm run build:js && npm run generate:css",
     "build:js": "npm run build:js:cjs && npm run build:js:esm",
     "build:js:cjs": "tsc --project tsconfig-cjs.json",
     "build:js:esm": "tsc --project tsconfig-esm.json",
-    "build:css": "npm run generate:css -- --minify",
     "generate:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css",
-    "dev:css": "npm run generate:css -- --watch",
     "clean": "rm -rf dist",
     "publish:pkg": "npm run clean && npm run build && npm publish"
   },
