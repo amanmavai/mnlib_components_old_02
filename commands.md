@@ -1,3 +1,9 @@
+## build process
+
+> the build process is very simple for this project, it involves using  
+> **typescript**: compiles typescript files to js files, generate type declarations  
+> **tailwindcss-cli**: generate a styles.css file in the dist folder
+
 ```sh
 # document the entire journey of commands with this file
 
