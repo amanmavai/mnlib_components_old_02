@@ -65,5 +65,6 @@ $ npm install @radix-ui/react-dropdown-menu
 $ npm install @radix-ui/react-avatar
 
 
+$ npm install @radix-ui/react-separator
 
 ```
