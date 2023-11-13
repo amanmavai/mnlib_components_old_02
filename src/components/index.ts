@@ -9,5 +9,6 @@ export * from "./layout";
 export * from "./toggle";
 export * from "./menu-list";
 export * from "./ui/avatar";
+export * from "./card";
 export {cn} from "../lib/utils";
 export * from "@radix-ui/react-icons";
